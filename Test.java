@@ -31,7 +31,7 @@ static double W_Flatbase,W_numperson,W_value,O_price;
 		System.out.println("Output3:"+ob.calculateprice(I_base3,I_numperson3,I_category3));
 	 }
 
-	 	 public static double calc1(double b,int n,String c)
+	 	/* public static double calc1(double b,int n,String c)
 	  	 {
      		 nbase=b+(0.05*b);
 		 nop=0.012*n*nbase;
@@ -62,9 +62,35 @@ static double W_Flatbase,W_numperson,W_value,O_price;
 		 {
 			
 		 price=nbase+nop;
-        }
-		 return price;
+        }*/
+	public static double calculateprice(double base,int numperson,String category)
+	  	 {
+      		 	//W_value=0.00;
+       			W_Flatbase=base +(flat_rate*base);
+		 		W_numperson=person_rate*numperson*W_Flatbase;
+		 		if(category==("food"))
+				{
+		 		W_value  = food_rate * W_Flatbase;
+                   
+                }
+                  else if(category==("drugs"))
+                  {
+                    W_value=drug_rate*W_Flatbase;
+                     //O_price=W_Flatbase+W_numperson+W_value;
+                  }
+                 O_price=W_Flatbase+W_numperson+W_value;
+       Else 
+       {        
+               O_price = W_Flatbase+ W_numperson ;
+       }                     
+		 		}
+             
+                 DecimalFormat f=new DecimalFormat("##.00");
+      final_price=f.format(price);
+             return final_price;
+       
 	 }
+
 }
 
 
