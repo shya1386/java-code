@@ -15,3 +15,17 @@ Markups are also added depending on the types of materials involved. If pharmace
 Then the final cost is calculated by summing up all the values.
 
 Since No UI or file/console input is expected ,example inputs of base price have been initialized in the code and the output of final price will be displayed.
+
+
+when we compile and run the code the following otput is displayed
+
+Input1:1299.99
+Output1:1591.58
+
+Input2:5432.0
+Output2:6199.81
+
+Input3:12456.95
+Output3:13707.63
+
+
