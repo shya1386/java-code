@@ -1,4 +1,6 @@
 package price;
+import java.lang.*;
+import java.io.*;
 public class Test 
 {	
  static double nbase,nop,value,price;
