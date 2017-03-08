@@ -84,10 +84,13 @@ static double W_Flatbase,W_numperson,W_value,O_price;
                O_price = W_Flatbase+ W_numperson ;
        }                     
 		 		}
+	String str = String.format("%1.2f", O_price);
+       O_price= Double.valueOf(str);
+       return O_price;
              
-                 DecimalFormat f=new DecimalFormat("##.00");
+             /*    DecimalFormat f=new DecimalFormat("##.00");
       final_price=f.format(price);
-             return final_price;
+             return final_price;*/
        
 	 }
 
