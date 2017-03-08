@@ -1,10 +1,10 @@
 package price;
-import java.util.*
+import java.util.*;
 import java.lang.*;
 import java.io.*;
-public class Test 
-{	
-static double W_Flatbase,W_numperson,W_value,O_price;
+ public class Test 
+ {	
+ static double W_Flatbase,W_numperson,W_value,O_price;
   static double flat_rate=0.05;
   static double person_rate=0.012;
   static double food_rate=0.13;
@@ -19,6 +19,7 @@ static double W_Flatbase,W_numperson,W_value,O_price;
   static String I_category1="food";
   static String I_category2="drugs";
   static String I_category3="books";
+ 
 	 public static void main(String []args)
 	 {
 		Test ob=new Test();
@@ -30,42 +31,10 @@ static double W_Flatbase,W_numperson,W_value,O_price;
         System.out.println();
         System.out.println("Input3:"+I_base3);
 		System.out.println("Output3:"+ob.calculateprice(I_base3,I_numperson3,I_category3));
-	 }
-
-	 	/* public static double calc1(double b,int n,String c)
-	  	 {
-     		 nbase=b+(0.05*b);
-		 nop=0.012*n*nbase;
-		 if(c==("food"))
-				 {
-		 value=0.13*nbase;
-		 }
-		 price=nbase+nop+value;
-      return price;
-	 }
-	 public static double calc2(double b1,int n1,String c1)
-	 {
-		 nbase=b1+(0.05*b1);
-		 nop=0.012*n1*nbase;
-		 if(c1==("drugs"))
-		 {
-			 value=0.075*nbase;
-		 }
-		 price=nbase+nop+value;
-      return price;
-		 
-	 }
-	 public static double calc3(double b2,int n2,String c2)
-	 {
-		 nbase=b2+(0.05*b2);
-		 nop=0.012*n2*nbase;
-		 if(c2==("books"))
-		 {
-			
-		 price=nbase+nop;
-        }*/
-	
-	public static double calculateprice(double base,int numperson,String category)
+ 
+     }
+ 
+  	 public static double calculateprice(double base,int numperson,String category)
 	  	 {
       		 	//W_value=0.00;
        			W_Flatbase=base +(flat_rate*base);
@@ -78,19 +47,13 @@ static double W_Flatbase,W_numperson,W_value,O_price;
                 	O_price=W_Flatbase+W_numperson+W_value;
                 }else {                     
                 	O_price = W_Flatbase+ W_numperson ;
-       }	 		
-	String str = String.format("%1.2f", O_price);
+       }
+	  String str = String.format("%1.2f", O_price);
        O_price= Double.valueOf(str);
        return O_price;
-             
-             /*    DecimalFormat f=new DecimalFormat("##.00");
-      final_price=f.format(price);
-             return final_price;*/
-       
-	 }
-
-}
-
+ 
+     }
+ }
 
   
 
