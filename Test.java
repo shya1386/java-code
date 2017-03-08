@@ -2,7 +2,7 @@ package price;
 import java.util.*
 import java.lang.*;
 import java.io.*;
-class Test 
+public class Test 
 {	
 static double W_Flatbase,W_numperson,W_value,O_price;
   static double flat_rate=0.05;
