@@ -10,4 +10,8 @@ From the initial base the flat markup is calculated first and then all other mar
 
 Then for each person that needs to work on the job, there is a markup of 1.2%.
 
+Markups are also added depending on the types of materials involved. If pharmaceuticals are involved, there is an immediate 7.5% markup, for food, there is a 13% markup, electronics require a 2% markup, everything else, there is no markup
 
+Then the final cost is calculated by summing up all the values.
+
+Since No UI or file/console input is expected ,example inputs of base price have been initialized in the code and the output of final price will be displayed.
