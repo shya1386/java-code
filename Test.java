@@ -64,27 +64,21 @@ static double W_Flatbase,W_numperson,W_value,O_price;
 			
 		 price=nbase+nop;
         }*/
+	
 	public static double calculateprice(double base,int numperson,String category)
 	  	 {
       		 	//W_value=0.00;
        			W_Flatbase=base +(flat_rate*base);
 		 		W_numperson=person_rate*numperson*W_Flatbase;
-		 		if(category==("food"))
-				{
+		 		if(category==("food")){
 		 		W_value  = food_rate * W_Flatbase;
-                   
-                }
-                  else if(category==("drugs"))
-                  {
-                    W_value=drug_rate*W_Flatbase;
-                     //O_price=W_Flatbase+W_numperson+W_value;
-                  }
-                 O_price=W_Flatbase+W_numperson+W_value;
-       Else 
-       {        
-               O_price = W_Flatbase+ W_numperson ;
-       }                     
-		 		}
+		 		O_price=W_Flatbase+W_numperson+W_value;
+                }else if(category==("drugs")){
+                	W_value=drug_rate*W_Flatbase;
+                	O_price=W_Flatbase+W_numperson+W_value;
+                }else {                     
+                	O_price = W_Flatbase+ W_numperson ;
+       }	 		
 	String str = String.format("%1.2f", O_price);
        O_price= Double.valueOf(str);
        return O_price;
