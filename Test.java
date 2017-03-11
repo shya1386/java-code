@@ -2,8 +2,8 @@ package price;
 import java.util.*;
 import java.lang.*;
 import java.io.*;
- public class Test 
- {	
+public class Test 
+  {	
   static double W_Flatbase,W_numperson,W_value,O_price;
   static double flat_rate=0.05;
   static double person_rate=0.012;
@@ -19,10 +19,9 @@ import java.io.*;
   static String I_category1="food";
   static String I_category2="drugs";
   static String I_category3="books";
- 
   public static void main(String []args)
-	 {
-	Test ob=new Test();
+  {
+        Test ob=new Test();
         System.out.println("Input1:"+I_base1);
         System.out.println("Output1:"+ob.calculateprice(I_base1,I_numperson1,I_category1));
         System.out.println();
@@ -40,15 +39,15 @@ import java.io.*;
 		 		if(category==("food")){
 		 		W_value  = food_rate * W_Flatbase;
 		 		O_price=W_Flatbase+W_numperson+W_value;
-                }else if(category==("drugs")){
-                	W_value=drug_rate*W_Flatbase;
-                	O_price=W_Flatbase+W_numperson+W_value;
-                }else {                     
-                	O_price = W_Flatbase+ W_numperson ;
-       }
+                                    }else if(category==("drugs")){
+                	              W_value=drug_rate*W_Flatbase;
+                	              O_price=W_Flatbase+W_numperson+W_value;
+                                        }else {                     
+                	              O_price = W_Flatbase+ W_numperson ;
+                                         }
 	  String str = String.format("%1.2f", O_price);
-       O_price= Double.valueOf(str);
-       return O_price;
+          O_price= Double.valueOf(str);
+          return O_price;
  
      }
  }
